@@ -65,7 +65,7 @@ public class Utils {
 
     public static List<User> convertApiUserListToUserList(List<ApiUser> apiUserList) {
         List<User> userList = new ArrayList<>();
-        if (apiUserList != null && apiUserList.size() > 0){
+        if (apiUserList != null && apiUserList.size() > 0) {
             for (ApiUser apiUser : apiUserList) {
                 User user = new User();
                 user.firstName = apiUser.firstname;
@@ -118,9 +118,9 @@ public class Utils {
 
     public static List<User> filterUserWhoLovesBoth(List<User> cricketFans, List<User> footballFans) {
         List<User> userWhoLovesBoth = new ArrayList<User>();
-        if (cricketFans != null && cricketFans.size() > 0){
+        if (cricketFans != null && cricketFans.size() > 0) {
             for (User cricketFan : cricketFans) {
-                if (footballFans != null && cricketFans.size() > 0){
+                if (footballFans != null && cricketFans.size() > 0) {
                     for (User footballFan : footballFans) {
                         if (cricketFan.id == footballFan.id) {
                             userWhoLovesBoth.add(cricketFan);
