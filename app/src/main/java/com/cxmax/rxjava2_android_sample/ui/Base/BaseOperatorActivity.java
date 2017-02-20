@@ -28,7 +28,6 @@ public abstract class BaseOperatorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_example);
         btn = (Button) findViewById(R.id.btn);
         textView = (TextView) findViewById(R.id.textView);
-
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
