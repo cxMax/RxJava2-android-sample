@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.cxmax.rxjava2_android_sample.R;
+import com.cxmax.rxjava2_android_sample.ui.Base.BaseOperatorActivity;
 import com.cxmax.rxjava2_android_sample.utils.AppConstant;
 
 import io.reactivex.Observer;
@@ -19,41 +20,21 @@ import io.reactivex.subjects.BehaviorSubject;
  * Created by cxmax on 2017/2/15.
  */
 
-public class BehaviorSubjectExampleActivity extends AppCompatActivity {
+public class BehaviorSubjectExampleActivity extends BaseOperatorActivity {
 
     private static final String TAG = BehaviorSubjectExampleActivity.class.getSimpleName();
-    Button btn;
-    TextView textView;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_example);
-        btn = (Button) findViewById(R.id.btn);
-        textView = (TextView) findViewById(R.id.textView);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                doSomeWork();
-            }
-        });
-    }
-
-    private void doSomeWork() {
+    protected void operatorTest() {
         BehaviorSubject<Integer> source = BehaviorSubject.create();
-
         source.subscribe(getFirstObserver()); // it will get 1, 2, 3, 4 and onComplete
-
         source.onNext(1);
         source.onNext(2);
         source.onNext(3);
-
         /*
          * it will emit 3(last emitted), 4 and onComplete for second observer also.
          */
         source.subscribe(getSecondObserver());
-
         source.onNext(4);
         source.onComplete();
     }

@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.cxmax.rxjava2_android_sample.R;
+import com.cxmax.rxjava2_android_sample.ui.Base.BaseOperatorActivity;
 import com.cxmax.rxjava2_android_sample.utils.AppConstant;
 
 import java.util.List;
@@ -21,31 +22,15 @@ import io.reactivex.disposables.Disposable;
  * Created by cxmax on 2017/2/15.
  */
 
-public class BufferExampleActivity extends AppCompatActivity {
+public class BufferExampleActivity extends BaseOperatorActivity {
 
     private static final String TAG = BufferExampleActivity.class.getSimpleName();
-    Button btn;
-    TextView textView;
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_example);
-        btn = (Button) findViewById(R.id.btn);
-        textView = (TextView) findViewById(R.id.textView);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                doSomeWork();
-            }
-        });
-    }
 
     /*
      * simple example using buffer operator - bundles all emitted values into a list
      */
-    private void doSomeWork() {
+    @Override
+    protected void operatorTest() {
         Observable<List<String>> buffered = getObservable().buffer(3, 1);
 
         // 3 means,  it takes max of three from its start index and create list
@@ -59,6 +44,7 @@ public class BufferExampleActivity extends AppCompatActivity {
 
         buffered.subscribe(getObserver());
     }
+
     private Observable<String> getObservable() {
         return Observable.just("one", "two", "three", "four", "five");
     }

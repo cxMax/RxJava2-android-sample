@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.cxmax.rxjava2_android_sample.R;
+import com.cxmax.rxjava2_android_sample.ui.Base.BaseOperatorActivity;
 import com.cxmax.rxjava2_android_sample.utils.AppConstant;
 
 import io.reactivex.Observer;
@@ -19,39 +20,21 @@ import io.reactivex.subjects.AsyncSubject;
  * Created by cxmax on 2017/2/15.
  */
 
-public class AsyncSubjectExampleActivity extends AppCompatActivity{
+public class AsyncSubjectExampleActivity extends BaseOperatorActivity {
 
     private static final String TAG = AsyncSubjectExampleActivity.class.getSimpleName();
-    Button btn;
-    TextView textView;
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_example);
-        btn = (Button) findViewById(R.id.btn);
-        textView = (TextView) findViewById(R.id.textView);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                doSomeWork();
-            }
-        });
-    }
 
     /* An AsyncSubject emits the last value (and only the last value) emitted by the source
      * Observable, and only after that source Observable completes. (If the source Observable
      * does not emit any values, the AsyncSubject also completes without emitting any values.)
      */
-    private void doSomeWork() {
+    @Override
+    protected void operatorTest() {
         AsyncSubject<Integer> source = AsyncSubject.create();
-
         source.subscribe(getFirstObserver());// it will emit only 4 and onComplete
         source.onNext(1);
         source.onNext(2);
         source.onNext(3);
-
         /*
          * it will emit 4 and onComplete for second observer also.
          */

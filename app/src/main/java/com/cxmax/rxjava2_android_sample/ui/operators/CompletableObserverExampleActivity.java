@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.cxmax.rxjava2_android_sample.R;
+import com.cxmax.rxjava2_android_sample.ui.Base.BaseOperatorActivity;
 import com.cxmax.rxjava2_android_sample.utils.AppConstant;
 
 import java.util.concurrent.TimeUnit;
@@ -23,34 +24,17 @@ import io.reactivex.schedulers.Schedulers;
  * Created by cxmax on 2017/2/16.
  */
 
-public class CompletableObserverExampleActivity extends AppCompatActivity {
+public class CompletableObserverExampleActivity extends BaseOperatorActivity {
 
     private static final String TAG = CompletableObserverExampleActivity.class.getSimpleName();
-    Button btn;
-    TextView textView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_example);
-        btn = (Button) findViewById(R.id.btn);
-        textView = (TextView) findViewById(R.id.textView);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                doSomeWork();
-            }
-        });
-    }
-
-    private void doSomeWork() {
+    protected void operatorTest() {
         Completable completable = Completable.timer(1000, TimeUnit.MILLISECONDS);
 
         completable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(getCompletableObserver());
-
     }
 
     private CompletableObserver getCompletableObserver() {
