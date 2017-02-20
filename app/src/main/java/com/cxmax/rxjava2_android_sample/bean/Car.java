@@ -12,9 +12,8 @@ import io.reactivex.ObservableSource;
 public class Car {
     private String brand;
 
-    public Car brand(String brand){
+    public void setBrand(String brand) {
         this.brand = brand;
-        return this;
     }
 
     public Observable<String> brandDeferObservable() {

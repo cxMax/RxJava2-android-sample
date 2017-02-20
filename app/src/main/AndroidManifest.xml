@@ -36,6 +36,60 @@
         <activity
             android:name=".ui.operators.DebounceExampleActivity"
             android:label="@string/debounce" />
+        <activity
+            android:name=".ui.operators.DeferExampleActivity"
+            android:label="@string/defer" />
+        <activity
+            android:name=".ui.operators.DisposableExampleActivity"
+            android:label="@string/disposable" />
+        <activity
+            android:name=".ui.operators.DistinctExampleActivity"
+            android:label="@string/distinct" />
+        <activity
+            android:name=".ui.operators.FilterExampleActivity"
+            android:label="@string/filter" />
+        <activity
+            android:name=".ui.operators.FlowableExampleActivity"
+            android:label="@string/Flowable" />
+        <activity
+            android:name=".ui.operators.IntervalExampleActivity"
+            android:label="@string/interval" />
+        <activity
+            android:name=".ui.operators.LastOperatorExampleActivity"
+            android:label="@string/last" />
+        <activity
+            android:name=".ui.operators.MapExampleActivity"
+            android:label="@string/map" />
+        <activity
+            android:name=".ui.operators.MergeExampleActivity"
+            android:label="@string/merge" />
+        <activity
+            android:name=".ui.operators.PublishSubjectExampleActivity"
+            android:label="@string/publish_subject" />
+        <activity
+            android:name=".ui.operators.ReduceExampleActivity"
+            android:label="@string/reduce" />
+        <activity
+            android:name=".ui.operators.ReplayExampleActivity"
+            android:label="@string/replay" />
+        <activity
+            android:name=".ui.operators.ReplaySubjectExampleActivity"
+            android:label="@string/replay_subject" />
+        <activity
+            android:name=".ui.operators.ScanExampleActivity"
+            android:label="@string/scan" />
+        <activity
+            android:name=".ui.operators.SimpleExampleActivity"
+            android:label="@string/simple" />
+        <activity
+            android:name=".ui.operators.SingleObserverExampleActivity"
+            android:label="@string/SingleObserver" />
+        <activity
+            android:name=".ui.operators.SkipExampleActivity"
+            android:label="@string/skip" />
+        <activity
+            android:name=".ui.operators.TakeExampleActivity"
+            android:label="@string/take" />
     </application>
 
 </manifest>
