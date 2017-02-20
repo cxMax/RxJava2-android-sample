@@ -1,14 +1,6 @@
 package com.cxmax.rxjava2_android_sample.ui.operators;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-
-import com.cxmax.rxjava2_android_sample.R;
 import com.cxmax.rxjava2_android_sample.ui.Base.BaseOperatorActivity;
 import com.cxmax.rxjava2_android_sample.utils.AppConstant;
 
@@ -24,6 +16,9 @@ public class BehaviorSubjectExampleActivity extends BaseOperatorActivity {
 
     private static final String TAG = BehaviorSubjectExampleActivity.class.getSimpleName();
 
+    /**
+     * BehaviorSubject会发送离订阅最近的上一个值，没有上一个值的时候会发送默认值。
+     */
     @Override
     protected void operatorTest() {
         BehaviorSubject<Integer> source = BehaviorSubject.create();

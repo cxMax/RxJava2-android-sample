@@ -1,14 +1,6 @@
 package com.cxmax.rxjava2_android_sample.ui.operators;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-
-import com.cxmax.rxjava2_android_sample.R;
 import com.cxmax.rxjava2_android_sample.ui.Base.BaseOperatorActivity;
 import com.cxmax.rxjava2_android_sample.utils.AppConstant;
 
@@ -24,9 +16,8 @@ public class AsyncSubjectExampleActivity extends BaseOperatorActivity {
 
     private static final String TAG = AsyncSubjectExampleActivity.class.getSimpleName();
 
-    /* An AsyncSubject emits the last value (and only the last value) emitted by the source
-     * Observable, and only after that source Observable completes. (If the source Observable
-     * does not emit any values, the AsyncSubject also completes without emitting any values.)
+    /**
+     * 简单的说使用AsyncSubject无论输入多少参数，永远只输出最后一个参数。
      */
     @Override
     protected void operatorTest() {

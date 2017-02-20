@@ -8,13 +8,34 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.OperatorsActivity"
+            android:label="@string/operators" />
+        <activity
+            android:name=".ui.operators.ConcatExampleActivity"
+            android:label="@string/concat" />
+        <activity
+            android:name=".ui.operators.CompletableObserverExampleActivity"
+            android:label="@string/CompletableObserver" />
+        <activity
+            android:name=".ui.operators.BufferExampleActivity"
+            android:label="@string/buffer" />
+        <activity
+            android:name=".ui.operators.BehaviorSubjectExampleActivity"
+            android:label="@string/behavior_subject" />
+        <activity
+            android:name=".ui.operators.AsyncSubjectExampleActivity"
+            android:label="@string/async_subject" />
+        <activity
+            android:name=".ui.operators.DebounceExampleActivity"
+            android:label="@string/debounce" />
     </application>
 
 </manifest>
