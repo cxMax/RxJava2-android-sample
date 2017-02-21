@@ -12,7 +12,7 @@
         android:id="@+id/btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/doSomeWork"
+        android:text="@string/operatorTest"
         android:textAllCaps="false"
         android:textColor="@android:color/black" />
 

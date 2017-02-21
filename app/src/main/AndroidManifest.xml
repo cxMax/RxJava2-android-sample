@@ -105,6 +105,9 @@
         <activity
             android:name=".ui.operators.ZipExampleActivity"
             android:label="@string/zip" />
+        <activity
+            android:name=".ui.networking.NetworkingActivity"
+            android:label="@string/networking" />
     </application>
 
 </manifest>

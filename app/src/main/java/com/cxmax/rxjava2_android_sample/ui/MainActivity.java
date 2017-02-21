@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.cxmax.rxjava2_android_sample.R;
+import com.cxmax.rxjava2_android_sample.ui.networking.NetworkingActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,5 +18,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void startOperatorsActivity(View view) {
         startActivity(new Intent(MainActivity.this, OperatorsActivity.class));
+    }
+
+
+    public void startNetworkingActivity(View view) {
+        startActivity(new Intent(MainActivity.this, NetworkingActivity.class));
     }
 }
