@@ -30,6 +30,11 @@ import com.cxmax.rxjava2_android_sample.ui.operators.SimpleExampleActivity;
 import com.cxmax.rxjava2_android_sample.ui.operators.SingleObserverExampleActivity;
 import com.cxmax.rxjava2_android_sample.ui.operators.SkipExampleActivity;
 import com.cxmax.rxjava2_android_sample.ui.operators.TakeExampleActivity;
+import com.cxmax.rxjava2_android_sample.ui.operators.ThrottleFirstExampleActivity;
+import com.cxmax.rxjava2_android_sample.ui.operators.ThrottleLastExampleActivity;
+import com.cxmax.rxjava2_android_sample.ui.operators.TimerExampleActivity;
+import com.cxmax.rxjava2_android_sample.ui.operators.WindowExampleActivity;
+import com.cxmax.rxjava2_android_sample.ui.operators.ZipExampleActivity;
 
 /**
  * Created by cxmax on 2017/2/20.
@@ -137,5 +142,25 @@ public class OperatorsActivity extends AppCompatActivity {
 
     public void startTakeActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, TakeExampleActivity.class));
+    }
+
+    public void startThrottleFirstActivity(View view) {
+        startActivity(new Intent(OperatorsActivity.this,ThrottleFirstExampleActivity.class));
+    }
+
+    public void startThrottleLastActivity(View view) {
+        startActivity(new Intent(OperatorsActivity.this, ThrottleLastExampleActivity.class));
+    }
+
+    public void startTimerActivity(View view) {
+        startActivity(new Intent(OperatorsActivity.this, TimerExampleActivity.class));
+    }
+
+    public void startWindowActivity(View view) {
+        startActivity(new Intent(OperatorsActivity.this,WindowExampleActivity.class));
+    }
+
+    public void startZipActivity(View view) {
+        startActivity(new Intent(OperatorsActivity.this, ZipExampleActivity.class));
     }
 }

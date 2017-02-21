@@ -90,6 +90,21 @@
         <activity
             android:name=".ui.operators.TakeExampleActivity"
             android:label="@string/take" />
+        <activity
+            android:name=".ui.operators.ThrottleFirstExampleActivity"
+            android:label="@string/throttle_first" />
+        <activity
+            android:name=".ui.operators.ThrottleLastExampleActivity"
+            android:label="@string/throttle_last" />
+        <activity
+            android:name=".ui.operators.TimerExampleActivity"
+            android:label="@string/timer" />
+        <activity
+            android:name=".ui.operators.WindowExampleActivity"
+            android:label="@string/window" />
+        <activity
+            android:name=".ui.operators.ZipExampleActivity"
+            android:label="@string/zip" />
     </application>
 
 </manifest>
